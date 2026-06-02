@@ -35,7 +35,7 @@ html, body {
 .bg-blur {
   position: absolute;
   inset: 0;
-  background-image: url('img/photo11.png');
+  background-image: url('photo11.png');
   background-size: cover;
   background-position: center 30%;
   filter: blur(5px) brightness(0.5) saturate(1.5);
