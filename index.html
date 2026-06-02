@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Sakhi 🎂</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- SCREEN 1: DOB Entry -->
+  <div class="screen active" id="screen1">
+    <div class="bg-blur"></div>
+    <div class="particles" id="particles1"></div>
+    <div class="screen1-content">
+      <div class="photo-frame-wrap">
+        <div class="photo-frame">
+          <img src="img/photo1.jpg" alt="Sakhi" class="frame-img" />
+          <div class="frame-glow"></div>
+        </div>
+        <div class="frame-caption">✨ Hey, it's a special day ✨</div>
+      </div>
+      <div class="dob-section">
+        <h1 class="bday-title">Happy Birthday</h1>
+        <p class="bday-sub">Enter your Date of Birth to unlock your surprise 🎁</p>
+        <div class="dob-keyboard">
+          <div class="dob-display">
+            <span id="dob-display-text">DD / MM / YYYY</span>
+          </div>
+          <div class="keyboard-grid" id="keyboard"></div>
+          <div class="keyboard-actions">
+            <button class="key-btn action-btn" onclick="clearDob()">✕ Clear</button>
+            <button class="key-btn action-btn unlock-btn" onclick="checkDob()">Unlock 🔓</button>
+          </div>
+        </div>
+        <p class="wrong-msg" id="wrongMsg">Hmm... that doesn't seem right 🤔</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 2: Birthday Wish -->
+  <div class="screen" id="screen2">
+    <div class="bg-blur"></div>
+    <div class="screen2-content">
+      <div class="wish-container">
+        <div class="confetti-top">🎊 🎉 🎊 🎉 🎊</div>
+        <h1 class="wish-heading">Helloooo Sakhiiiii🌸🌹!</h1>
+        <p class="wish-date">3rd June 2005 — what a day the world got lucky 🌸</p>
+        <p class="wish-text">Another year around the sun, and you're still the same chaotic, sweet, annoying, and absolutely irreplaceable person. Happiest B'day Missss! 🎂</p>
+        <button class="next-btn glow-btn" onclick="goToScreen(3)">Surprise Surprise 🎁</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 3: Happiest Bday -->
+  <div class="screen" id="screen3">
+    <div class="bg-blur"></div>
+    <div class="screen3-content">
+      <div class="screen3-overlay">
+        <h1 class="happiest-text">Happiest B'day<br/><span class="misss">Misss... 💕</span></h1>
+        <p class="be-ready">Be ready... something special for the B'day girl ✨</p>
+        <button class="next-btn glow-btn" onclick="goToScreen(4)">I'm Ready 💫</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 4: Heartfelt Message -->
+  <div class="screen" id="screen4">
+    <div class="bg-blur"></div>
+    <div class="screen4-content">
+      <div class="gallery-side left-gallery">
+        <div class="gallery-img"><img src="img/photo2.jpg" alt=""/></div>
+        <div class="gallery-img"><img src="img/photo4.jpg" alt=""/></div>
+        <div class="gallery-img"><img src="img/photo8.jpg" alt=""/></div>
+      </div>
+      <div class="message-center">
+        <h2 class="message-title">For my Sakhi 🌸</h2>
+        <div class="message-box">
+          <p>You know what's funny? Out of all the people in this world, I'm genuinely glad it was YOU who became my person. 😊</p>
+          <p>You're the kind of friend who's equal parts annoying and amazing — and somehow that makes you absolutely perfect. 💕</p>
+          <p>This year, I just want you to know — your smile is contagious, your energy is unmatched, and your existence literally makes days better. Including mine.</p>
+          <p>Wishing you a year full of everything you deserve — happiness, good food, zero stress, and loads of fun! 🎉
+            Hmesha mushkurate rahiye🌸khush rahiye.
+            Once again!!! Happiest b'dayyyyyyy Lady Don😂
+          </p>
+          <p class="sign-off">Happy Birthday, Miss. You're one of a kind. 🌟<br/>— Apka sakha, ek choti si koshis apne sakhi ke liye 😄</p>
+        </div>
+        <button class="next-btn glow-btn" onclick="goToScreen(45)">Next Surprise 🎆</button>
+      </div>
+      <div class="gallery-side right-gallery">
+        <div class="gallery-img"><img src="img/photo3.jpg" alt=""/></div>
+        <div class="gallery-img"><img src="img/photo7.jpg" alt=""/></div>
+        <div class="gallery-img"><img src="img/photo10.jpg" alt=""/></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 4.5: RAWR FUNNY SCREEN -->
+  <div class="screen" id="screen45">
+    <div class="bg-blur"></div>
+    <div class="rawr-screen-content">
+      <div class="rawr-card">
+        <h2 class="rawr-title">⚠️ Breaking News ⚠️</h2>
+        <p class="rawr-sub">— A very important report from your sakha —</p>
+        <div class="rawr-img-wrap">
+          <img src="img/photo6.jpg" alt="rawr" class="rawr-img"/>
+          <div class="rawr-bubble">rawr. 🐾</div>
+        </div>
+        <div class="rawr-texts">
+          <div class="rawr-line">🔴 LIVE: Local girl spotted <span>saying "rawr"</span> from a very suspicious angle 📸</div>
+          <div class="rawr-line">📋 Sources confirm she is <span>equally dangerous & adorable</span> — handle with care 💀</div>
+          <div class="rawr-line">🎂 Today she turns 21... wait no — <span>officially 1 year more dramatic</span> than last year 😭</div>
+          <div class="rawr-line">✅ Verdict: <span>Still the best person I know.</span> Even with the rawr era. 💕</div>
+        </div>
+        <button class="next-btn glow-btn rawr-next-btn" onclick="goToScreen(5)">Ok ok next karo 😂🎆</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 5: Countdown -->
+  <div class="screen" id="screen5">
+    <div class="bg-blur"></div>
+    <div class="screen5-content">
+      <div class="countdown-wrap">
+        <p class="countdown-label">Get Ready...</p>
+        <div class="countdown-number" id="countdownNum">3</div>
+        <p class="countdown-sub" id="countdownSub">Make a wish 🕯️</p>
+        <div class="cake-gif">🎂</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 6: Final Explosion -->
+  <div class="screen" id="screen6">
+    <div class="bg-blur"></div>
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div class="screen6-content">
+      <div class="final-msg">
+        <div class="hearts-float" id="heartsFloat"></div>
+        <h1 class="final-title">🎂 Happiest Birthday 🎂</h1>
+        <h2 class="final-name">Missssssss 💖</h2>
+        <div class="final-photos">
+          <img src="img/photo1.jpg" alt="" class="final-photo fp1"/>
+          <img src="img/photo11.png" alt="" class="final-photo fp2"/>
+          <img src="img/photo9.jpg" alt="" class="final-photo fp3"/>
+        </div>
+        <p class="final-song">🎵 Happy Birthday to you... Happy Birthday to you... 🎵</p>
+        <p class="final-song">🎵 Happy Birthday dear Aastha... Happy Birthday to you! 🎵</p>
+        <div class="emoji-rain" id="emojiRain"></div>
+        <p class="final-footer">Made with 💕 just for you, Miss 🎉</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
